@@ -1,16 +1,9 @@
-# bmi_calculator
+# BMI Calculator
 
 Flutter project to calculate your body mass index
 
-## Getting Started
+## UI/UX Design
 
-This project is a starting point for a Flutter application.
+[BMI Calculator App - Neumorphism](https://dribbble.com/shots/11368106-BMI-Calculator-App-Neumorphism) by Kevin Al-Rizal
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Preview 1](https://cdn.dribbble.com/users/4320847/screenshots/11368106/media/85457218feaf4bd4db424331de66d097.jpg?compress=1&resize=400x400&vertical=top)
