@@ -12,6 +12,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.transparent,
       foregroundColor: kTextColor,
+      automaticallyImplyLeading: false,
       title: title,
       centerTitle: true,
     );

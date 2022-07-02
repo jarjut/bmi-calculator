@@ -1,5 +1,6 @@
 import 'package:bmi_calculator/constants/colors.dart';
 import 'package:bmi_calculator/constants/variables.dart';
+import 'package:bmi_calculator/screens/bmi_result_screen.dart';
 import 'package:bmi_calculator/widgets/app_bar.dart';
 import 'package:bmi_calculator/widgets/button.dart';
 import 'package:bmi_calculator/widgets/container.dart';
@@ -45,6 +46,12 @@ class _BmiCalculateScreenState extends State<BmiCalculateScreen> {
     currentAge += value;
     if (currentAge < 0) currentAge = 0;
     ageTextController.text = currentAge.toString();
+  }
+
+  double calculateBmi() {
+    var weight = int.parse(weightTextController.text);
+    var height = this.height / 100;
+    return weight / (height * height);
   }
 
   @override
@@ -287,7 +294,18 @@ class _BmiCalculateScreenState extends State<BmiCalculateScreen> {
                 const VerticalGap(),
                 MyButton(
                   label: "Let's Begin",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (_, __, ___) =>
+                            BMIResultScreen(bmi: calculateBmi()),
+                        transitionsBuilder: (_, animation, __, child) =>
+                            FadeTransition(opacity: animation, child: child),
+                        transitionDuration: const Duration(milliseconds: 300),
+                      ),
+                    );
+                  },
                 ),
                 const VerticalGap(),
               ],

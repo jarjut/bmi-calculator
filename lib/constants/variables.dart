@@ -25,3 +25,18 @@ const List<BoxShadow> kNeumorphicShadows = [
     spreadRadius: kNeumorphicSpreadRadius,
   ),
 ];
+
+const List<BoxShadow> kNeumorphicShadows2 = [
+  BoxShadow(
+    color: kNeumorphicTopColor,
+    offset: Offset(-8, -8),
+    blurRadius: 15,
+    spreadRadius: kNeumorphicSpreadRadius,
+  ),
+  BoxShadow(
+    color: kNeumorphicBottomColor,
+    offset: Offset(8, 8),
+    blurRadius: 15,
+    spreadRadius: kNeumorphicSpreadRadius,
+  ),
+];
