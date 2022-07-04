@@ -1,10 +1,19 @@
 import 'package:bmi_calculator/constants/colors.dart';
-import 'package:flutter/painting.dart';
+import 'package:bmi_calculator/utils.dart';
+import 'package:flutter/material.dart';
 
 const Radius kRadius = Radius.circular(16.0);
 const double kButtonHeight = 52.0;
+double kResponsiveButtonHeight(BuildContext context) {
+  return isSmallHeight(context) ? kButtonHeight * 0.75 : kButtonHeight;
+}
+
 const double kVerticalPadding = 20;
 const double kHorizontalPadding = 20;
+double kResponsiveVerticalPadding(BuildContext context) {
+  return isSmallHeight(context) ? kVerticalPadding / 2 : kVerticalPadding;
+}
+
 const double kGapSize = 20.0;
 
 // Neumorphic

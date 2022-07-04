@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/constants/constants.dart';
+import 'package:bmi_calculator/utils.dart';
 import 'package:bmi_calculator/widgets/app_bar.dart';
 import 'package:bmi_calculator/widgets/button.dart';
 import 'package:bmi_calculator/widgets/helper.dart';
@@ -18,10 +19,12 @@ class BMIResultScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Container(
-            width: 500,
-            height: 700,
-            padding: const EdgeInsets.symmetric(
-              vertical: kVerticalPadding,
+            constraints: const BoxConstraints(
+              maxHeight: 700,
+              maxWidth: 500,
+            ),
+            padding: EdgeInsets.symmetric(
+              vertical: kResponsiveVerticalPadding(context),
               horizontal: kHorizontalPadding,
             ),
             child: Column(
@@ -91,7 +94,7 @@ class BMIResultScreen extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
-                const VerticalGap(),
+                if (!isSmallHeight(context)) const VerticalGap(),
               ],
             ),
           ),

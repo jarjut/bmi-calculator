@@ -30,7 +30,7 @@ class _MyRadioState<T> extends State<MyRadio<T>> {
         onTap: () => widget.onChanged?.call(widget.value),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          height: kButtonHeight,
+          height: kResponsiveButtonHeight(context),
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(kRadius),
             gradient: LinearGradient(

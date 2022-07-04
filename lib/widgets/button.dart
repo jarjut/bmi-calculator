@@ -35,7 +35,7 @@ class _MyButtonState extends State<MyButton> {
         onPanEnd: (_) => setState(() => onTapUp()),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 50),
-          height: kButtonHeight,
+          height: kResponsiveButtonHeight(context),
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: const LinearGradient(colors: kPrimaryGradientColors),
